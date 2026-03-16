@@ -1,35 +1,48 @@
-import { Mail, Linkedin, MapPin, Phone } from "lucide-react";
+import { Mail, Linkedin, MapPin, Phone, Globe } from "lucide-react";
 
 const CVHeader = () => {
   return (
-    <header className="grid grid-cols-12 gap-6 md:gap-8 mb-10 md:mb-12">
-      <div className="col-span-12 md:col-span-8">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tighter text-foreground">
-          Noel Moriano
-        </h1>
-        <p className="text-cv-accent font-mono text-[10px] uppercase tracking-[0.2em] mt-2">
-          Entrepreneur • Full Stack Developer • Import & Digital Business
-        </p>
-      </div>
-      <div className="col-span-12 md:col-span-4 md:text-right space-y-1.5 mt-2 md:mt-0">
-        <ContactItem
-          icon={<Mail className="w-3 h-3" />}
-          text="nmoriano26@gmail.com"
-          href="mailto:nmoriano26@gmail.com"
-        />
-        <ContactItem
-          icon={<Linkedin className="w-3 h-3" />}
-          text="linkedin.com/in/elleondev"
-          href="https://www.linkedin.com/in/elleondev"
-        />
-        <ContactItem
-          icon={<MapPin className="w-3 h-3" />}
-          text="Lima, Peru"
-        />
-        <ContactItem
-          icon={<Phone className="w-3 h-3" />}
-          text="+51 (---) --- ---"
-        />
+    <header className="mb-10 md:mb-14">
+      {/* Top bar accent */}
+      <div className="w-12 h-1 bg-cv-accent rounded-full mb-8" />
+
+      <div className="grid grid-cols-12 gap-6 md:gap-8">
+        <div className="col-span-12 md:col-span-7">
+          <h1 className="text-[32px] md:text-[38px] font-bold tracking-[-0.04em] text-foreground leading-none">
+            Noel Moriano
+          </h1>
+          <p className="text-cv-accent font-mono text-[10px] uppercase tracking-[0.2em] mt-3 font-medium">
+            Emprendedor • Desarrollador Full Stack • Negocios Digitales e Importación
+          </p>
+          <p className="text-[12px] leading-[1.7] text-cv-muted mt-5 max-w-[52ch]">
+            Emprendedor tecnológico y desarrollador full stack con experiencia en la creación de productos digitales, dirección de proyectos tecnológicos y desarrollo de oportunidades de negocio. Enfocado en sistemas escalables, innovación y negocios impulsados por tecnología.
+          </p>
+        </div>
+        <div className="col-span-12 md:col-span-5 md:text-right space-y-2.5 md:mt-1">
+          <ContactItem
+            icon={<Mail className="w-3.5 h-3.5" />}
+            text="nmoriano26@gmail.com"
+            href="mailto:nmoriano26@gmail.com"
+          />
+          <ContactItem
+            icon={<Linkedin className="w-3.5 h-3.5" />}
+            text="linkedin.com/in/elleondev"
+            href="https://www.linkedin.com/in/elleondev"
+          />
+          <ContactItem
+            icon={<Globe className="w-3.5 h-3.5" />}
+            text="elleondev.com"
+            href="#"
+          />
+          <ContactItem
+            icon={<MapPin className="w-3.5 h-3.5" />}
+            text="Lima, Perú"
+          />
+          <ContactItem
+            icon={<Phone className="w-3.5 h-3.5" />}
+            text="+51 (---) --- ---"
+          />
+        </div>
       </div>
     </header>
   );
@@ -44,9 +57,9 @@ const ContactItem = ({
   text: string;
   href?: string;
 }) => {
-  const content = (
-    <div className="flex items-center md:justify-end gap-2 text-[11px] text-cv-muted">
-      {icon}
+  const inner = (
+    <div className="flex items-center md:justify-end gap-2.5 text-[11px] text-cv-muted group-hover:text-cv-accent transition-colors duration-200">
+      <span className="opacity-50 group-hover:opacity-100 transition-opacity">{icon}</span>
       <span>{text}</span>
     </div>
   );
@@ -57,14 +70,14 @@ const ContactItem = ({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="block hover:text-cv-accent transition-colors duration-200"
+        className="block group"
       >
-        {content}
+        {inner}
       </a>
     );
   }
 
-  return content;
+  return <div className="group">{inner}</div>;
 };
 
 export default CVHeader;
