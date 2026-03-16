@@ -23,8 +23,8 @@ const skills = {
 };
 
 const languages = [
-  { name: "Español", level: "Nativo", bar: 100 },
-  { name: "Inglés", level: "Elemental", bar: 30 },
+  { name: "Español", level: "Nativo" },
+  { name: "Inglés", level: "Elemental" },
 ];
 
 const CVSidebar = () => {

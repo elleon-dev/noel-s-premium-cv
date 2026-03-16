@@ -40,7 +40,7 @@ const CVHeader = () => {
           />
           <ContactItem
             icon={<Phone className="w-3.5 h-3.5" />}
-            text="+51 (---) --- ---"
+            text="+51 972 332 824"
           />
         </div>
       </div>
