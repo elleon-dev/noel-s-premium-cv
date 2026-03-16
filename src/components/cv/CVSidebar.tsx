@@ -5,7 +5,7 @@ const skills = {
     "Emprendimiento",
     "Desarrollo de Negocio",
     "Pensamiento Estratégico",
-    "Crecimiento de Startups",
+    "Resolución de Problemas",
     "Gestión de Proyectos",
   ],
   stack: [
