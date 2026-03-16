@@ -60,17 +60,9 @@ const CVSidebar = () => {
         </SectionTitle>
         <div className="space-y-3.5">
           {languages.map((lang) => (
-            <div key={lang.name}>
-              <div className="flex justify-between text-[11px] mb-1.5">
-                <span className="text-foreground font-medium">{lang.name}</span>
-                <span className="text-cv-muted text-[10px] italic">{lang.level}</span>
-              </div>
-              <div className="h-[3px] bg-cv-subtle rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-cv-accent rounded-full transition-all duration-500"
-                  style={{ width: `${lang.bar}%` }}
-                />
-              </div>
+            <div key={lang.name} className="flex justify-between text-[11px]">
+              <span className="text-foreground font-medium">{lang.name}</span>
+              <span className="text-cv-muted text-[10px] italic">{lang.level}</span>
             </div>
           ))}
         </div>
