@@ -15,7 +15,7 @@ const CVHeader = () => {
             Emprendedor • Desarrollador Full Stack • Negocios Digitales e Importación
           </p>
           <p className="text-[12px] leading-[1.7] text-cv-muted mt-5 max-w-[52ch]">
-            Emprendedor tecnológico y desarrollador full stack con experiencia en la creación de productos digitales, dirección de proyectos tecnológicos y desarrollo de oportunidades de negocio. Enfocado en sistemas escalables, innovación y negocios impulsados por tecnología.
+            Emprendedor tecnológico y desarrollador full stack con experiencia en la creación de productos digitales, dirección de proyectos tecnológicos y desarrollo de oportunidades de negocio. Me caracterizo por mi estabilidad y enfoque en los proyectos en los cuales tengo la oportunidad de participar.
           </p>
         </div>
         <div className="col-span-12 md:col-span-5 md:text-right space-y-2.5 md:mt-1">
