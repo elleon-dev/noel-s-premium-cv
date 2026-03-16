@@ -26,7 +26,7 @@ const experiences = [
     highlights: [
       "Dirección de proyectos tecnológicos e iniciativas de transformación digital",
       "Mejoras operativas en la línea de servicios TI",
-      "Gestión de la cartera de equipos electrónicos",
+      "Gestión de proyectos tecnológicos y mejoras operativas",
     ],
     tag: "Liderazgo",
     tagIcon: <Rocket className="w-2.5 h-2.5" />,
