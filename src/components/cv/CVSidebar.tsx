@@ -24,7 +24,7 @@ const skills = {
   ],
   business: [
     "Importación y Comercio",
-    "Operaciones Comerciales",
+    "Negociación con Proveedores",
     "Operaciones Comerciales",
   ],
 };
