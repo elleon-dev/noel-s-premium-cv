@@ -19,7 +19,6 @@ const skills = {
     "Supabase",
     "Google Cloud",
     "Resend",
-    "Productos Digitales",
     "Aplicaciones Web",
   ],
   ai: [
@@ -34,6 +33,7 @@ const skills = {
     "Importación y Comercio",
     "Negociación con Proveedores",
     "Operaciones Comerciales",
+    "Productos Digitales",
   ],
 };
 
