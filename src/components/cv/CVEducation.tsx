@@ -9,7 +9,7 @@ const education = [
     ongoing: true,
   },
   {
-    credential: "Titulado",
+    credential: "Titulado en Computación e Informática",
     institution: "Instituto de Educación Superior Tecnológico Privado Libertador",
     period: "2015 — 2018",
     location: "Chorrillos — Lima, Perú",
