@@ -1,12 +1,32 @@
 import CVHeader from "@/components/cv/CVHeader";
 import CVSidebar from "@/components/cv/CVSidebar";
 import CVExperience from "@/components/cv/CVExperience";
-import { Target, Award } from "lucide-react";
+import { Target, Award, Download } from "lucide-react";
+
+const handleDownload = () => {
+  const previous = document.title;
+  document.title = "Noel Moriano - Curriculum Vitae";
+  const restore = () => {
+    document.title = previous;
+    window.removeEventListener("afterprint", restore);
+  };
+  window.addEventListener("afterprint", restore);
+  window.print();
+};
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-secondary flex items-start justify-center py-8 md:py-16 px-4 print:py-0 print:px-0 print:bg-background">
-      <div className="w-full max-w-[850px] bg-background p-8 md:p-14 shadow-[0_1px_3px_rgba(0,0,0,0.06),0_0_0_1px_rgba(0,0,0,0.03)] rounded print:shadow-none print:p-8">
+    <div className="cv-page min-h-screen bg-secondary flex items-start justify-center py-8 md:py-16 px-4 print:py-0 print:px-0 print:bg-background">
+      <button
+        type="button"
+        onClick={handleDownload}
+        aria-label="Descargar currículum en PDF"
+        className="print:hidden fixed top-4 right-4 z-50 inline-flex items-center gap-2 rounded-full bg-cv-accent px-4 py-2.5 text-xs font-semibold text-background shadow-lg transition hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-cv-accent focus-visible:ring-offset-2"
+      >
+        <Download className="w-4 h-4" />
+        Descargar PDF
+      </button>
+      <div className="cv-sheet w-full max-w-[850px] bg-background p-8 md:p-14 shadow-[0_1px_3px_rgba(0,0,0,0.06),0_0_0_1px_rgba(0,0,0,0.03)] rounded print:shadow-none print:p-8">
         <CVHeader />
 
         {/* Section divider */}
@@ -49,7 +69,7 @@ const Index = () => {
         </div>
 
         {/* Footer */}
-        <footer className="mt-14 pt-6 border-t border-cv-border">
+        <footer className="mt-14 pt-6 print:mt-5 print:pt-3 border-t border-cv-border">
           <div className="flex items-center justify-between">
             <p className="text-[9px] text-cv-muted tracking-wider uppercase">
               Noel Moriano — Currículum Vitae
