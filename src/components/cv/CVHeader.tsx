@@ -1,4 +1,5 @@
 import { Mail, Linkedin, MapPin, Phone, Github } from "lucide-react";
+import fotoAsset from "@/assets/noel-moriano-foto.jpg.asset.json";
 
 const CVHeader = () => {
   return (
@@ -19,6 +20,13 @@ const CVHeader = () => {
           </p>
         </div>
         <div className="col-span-12 md:col-span-5 print:col-span-5 md:text-right print:text-right space-y-3 md:mt-1">
+          <div className="flex md:justify-end print:justify-end mb-2">
+            <img
+              src={fotoAsset.url}
+              alt="Retrato de Noel Moriano"
+              className="w-20 h-20 rounded-full object-cover ring-1 ring-cv-border shadow-sm print:w-[86px] print:h-[86px]"
+            />
+          </div>
           <ContactItem
             icon={<Mail className="w-4 h-4" />}
             text="nmoriano26@gmail.com"
