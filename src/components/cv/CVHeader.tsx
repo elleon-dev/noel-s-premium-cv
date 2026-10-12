@@ -30,9 +30,9 @@ const CVHeader = () => {
             href="https://www.linkedin.com/in/elleondev"
           />
           <ContactItem
-            icon={<Globe className="w-3.5 h-3.5" />}
-            text="elleondev.com"
-            href="#"
+            icon={<Github className="w-3.5 h-3.5" />}
+            text="github.com/elleon-dev"
+            href="https://github.com/elleon-dev"
           />
           <ContactItem
             icon={<MapPin className="w-3.5 h-3.5" />}
