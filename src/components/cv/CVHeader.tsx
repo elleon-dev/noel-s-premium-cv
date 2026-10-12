@@ -1,4 +1,4 @@
-import { Mail, Linkedin, MapPin, Phone, Globe } from "lucide-react";
+import { Mail, Linkedin, MapPin, Phone, Github } from "lucide-react";
 
 const CVHeader = () => {
   return (

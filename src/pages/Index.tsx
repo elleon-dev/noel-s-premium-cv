@@ -55,7 +55,7 @@ const Index = () => {
               Noel Moriano — Currículum Vitae
             </p>
             <p className="text-[9px] text-cv-muted tracking-wider uppercase">
-              Lima, Perú — 2025
+              Lima, Perú — Octubre 2026
             </p>
           </div>
         </footer>
