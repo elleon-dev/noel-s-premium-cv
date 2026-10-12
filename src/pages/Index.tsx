@@ -1,6 +1,7 @@
 import CVHeader from "@/components/cv/CVHeader";
 import CVSidebar from "@/components/cv/CVSidebar";
 import CVExperience from "@/components/cv/CVExperience";
+import CVEducation from "@/components/cv/CVEducation";
 import { Target, Award, Download } from "lucide-react";
 
 const handleDownload = () => {
@@ -65,6 +66,8 @@ const Index = () => {
                 />
               </div>
             </section>
+
+            <CVEducation />
           </div>
         </div>
 
