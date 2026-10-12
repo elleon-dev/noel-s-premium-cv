@@ -1,4 +1,4 @@
-import { Lightbulb, Code2, Briefcase, Languages } from "lucide-react";
+import { Lightbulb, Code2, Briefcase, Languages, Sparkles } from "lucide-react";
 
 const skills = {
   core: [
@@ -18,9 +18,13 @@ const skills = {
     "Supabase",
     "Google Cloud",
     "Resend",
-    "Claude AI",
     "Productos Digitales",
     "Aplicaciones Web",
+  ],
+  ai: [
+    "Claude AI",
+    "Antigravity",
+    "n8n",
   ],
   business: [
     "Importación y Comercio",
@@ -49,6 +53,15 @@ const CVSidebar = () => {
         icon={<Code2 className="w-3.5 h-3.5" />}
         title="Stack Técnico"
         items={skills.stack}
+      />
+
+      <Divider />
+
+      <SkillSection
+        icon={<Sparkles className="w-3.5 h-3.5" />}
+        title="IA & Automatización"
+        items={skills.ai}
+        highlight
       />
 
       <Divider />
@@ -103,10 +116,12 @@ const SkillSection = ({
   title,
   items,
   icon,
+  highlight,
 }: {
   title: string;
   items: string[];
   icon: React.ReactNode;
+  highlight?: boolean;
 }) => (
   <section>
     <SectionTitle icon={icon}>{title}</SectionTitle>
@@ -114,8 +129,15 @@ const SkillSection = ({
       {items.map((skill) => (
         <span
           key={skill}
-          className="px-2.5 py-1 bg-cv-subtle text-foreground text-[10px] font-medium rounded-md border border-cv-border hover:border-cv-accent/30 hover:bg-cv-accent/5 transition-colors duration-200 cursor-default"
+          className={
+            highlight
+              ? "inline-flex items-center gap-1 px-2.5 py-1 bg-cv-accent/8 text-cv-accent text-[10px] font-semibold rounded-md border border-cv-accent/25 hover:bg-cv-accent/12 transition-colors duration-200 cursor-default"
+              : "px-2.5 py-1 bg-cv-subtle text-foreground text-[10px] font-medium rounded-md border border-cv-border hover:border-cv-accent/30 hover:bg-cv-accent/5 transition-colors duration-200 cursor-default"
+          }
         >
+          {highlight && (
+            <Sparkles className="w-2.5 h-2.5 opacity-70" />
+          )}
           {skill}
         </span>
       ))}
