@@ -137,11 +137,13 @@ const SkillSection = ({
   items,
   icon,
   highlight,
+  chipIcon,
 }: {
   title: string;
   items: string[];
   icon: React.ReactNode;
   highlight?: boolean;
+  chipIcon?: React.ReactNode;
 }) => (
   <section>
     <SectionTitle icon={icon}>{title}</SectionTitle>
@@ -155,9 +157,7 @@ const SkillSection = ({
               : "px-2.5 py-1 bg-cv-subtle text-foreground text-[10px] font-medium rounded-md border border-cv-border hover:border-cv-accent/30 hover:bg-cv-accent/5 transition-colors duration-200 cursor-default"
           }
         >
-          {highlight && (
-            <Sparkles className="w-2.5 h-2.5 opacity-70" />
-          )}
+          {highlight && (chipIcon ?? <Sparkles className="w-2.5 h-2.5 opacity-70" />)}
           {skill}
         </span>
       ))}
