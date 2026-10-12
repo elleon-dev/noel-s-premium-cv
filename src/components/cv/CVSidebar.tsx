@@ -31,7 +31,7 @@ const skills = {
 
 const languages = [
   { name: "Español", level: "Nativo" },
-  { name: "Inglés", level: "Elemental" },
+  { name: "Inglés", level: "Básico" },
 ];
 
 const CVSidebar = () => {
