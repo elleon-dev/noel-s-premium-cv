@@ -93,6 +93,7 @@ const CVExperience = () => {
                     {exp.tag}
                   </span>
                 </div>
+              </div>
               <div className="text-right shrink-0 mt-0.5 sm:mt-0">
                 <span className="text-[12px] font-mono text-cv-muted tabular-nums block">
                   {exp.period}
