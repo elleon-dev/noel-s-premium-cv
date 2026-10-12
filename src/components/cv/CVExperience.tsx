@@ -81,19 +81,18 @@ const CVExperience = () => {
 
             <header className="flex flex-col sm:flex-row print:flex-row sm:justify-between sm:items-start mb-2.5 gap-1">
               <div>
-                <div className="flex items-center gap-2.5">
-                  <h4 className="text-[17px] font-bold text-foreground leading-tight">
-                    {exp.role}
-                  </h4>
+                <h4 className="text-[17px] font-bold text-foreground leading-tight">
+                  {exp.role}
+                </h4>
+                <div className="flex flex-wrap items-center gap-2.5 mt-1">
+                  <p className="text-[14px] text-cv-accent font-semibold">
+                    {exp.company}
+                  </p>
                   <span className="inline-flex items-center gap-1 text-[10px] uppercase tracking-wider font-semibold text-cv-accent bg-cv-accent/8 px-2 py-0.5 rounded-full border border-cv-accent/15">
                     {exp.tagIcon}
                     {exp.tag}
                   </span>
                 </div>
-                <p className="text-[14px] text-cv-accent font-semibold mt-1">
-                  {exp.company}
-                </p>
-              </div>
               <div className="text-right shrink-0 mt-0.5 sm:mt-0">
                 <span className="text-[12px] font-mono text-cv-muted tabular-nums block">
                   {exp.period}
