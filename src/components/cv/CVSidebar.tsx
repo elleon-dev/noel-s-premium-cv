@@ -14,6 +14,7 @@ const skills = {
     "Next.js",
     "Astro",
     "Node.js",
+    "Integración de APIs",
     "Firebase",
     "Supabase",
     "Google Cloud",
@@ -62,7 +63,7 @@ const CVSidebar = () => {
 
       <SkillSection
         icon={<Sparkles className="w-3.5 h-3.5" />}
-        title="IA & Automatización"
+        title="AI Skills"
         items={skills.ai}
         highlight
       />
