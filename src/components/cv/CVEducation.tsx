@@ -1,4 +1,4 @@
-import { GraduationCap, Clock } from "lucide-react";
+import { Clock } from "lucide-react";
 
 const education = [
   {
@@ -6,18 +6,14 @@ const education = [
     institution: "Universidad Tecnológica del Perú (UTP)",
     period: "En curso",
     location: "Lima, Perú",
-    status: "En curso",
-    statusIcon: <Clock className="w-3 h-3" />,
-    note: "Formación universitaria en gestión empresarial, complementaria a la trayectoria tecnológica y emprendedora.",
+    ongoing: true,
   },
   {
     credential: "Titulado",
     institution: "Instituto de Educación Superior Tecnológico Privado Libertador",
     period: "2015 — 2018",
     location: "Chorrillos — Lima, Perú",
-    status: null,
-    statusIcon: null,
-    note: null,
+    ongoing: false,
   },
 ];
 
@@ -41,31 +37,18 @@ const CVEducation = () => {
                 <h4 className="text-[17px] font-bold text-foreground leading-tight">
                   {item.credential}
                 </h4>
-                <div className="flex flex-wrap items-center gap-2.5 mt-1">
-                  <p className="text-[14px] text-cv-accent font-semibold">
-                    {item.institution}
-                  </p>
-                  {item.status && (
-                    <span className="inline-flex items-center gap-1 text-[10px] uppercase tracking-wider font-semibold text-cv-accent bg-cv-accent/8 px-2 py-0.5 rounded-full border border-cv-accent/15">
-                      {item.statusIcon}
-                      {item.status}
-                    </span>
-                  )}
-                </div>
+                <p className="text-[14px] text-cv-accent font-semibold mt-1">
+                  {item.institution}
+                </p>
               </div>
               <div className="text-right shrink-0 mt-0.5 sm:mt-0">
-                <span className="text-[12px] font-mono text-cv-muted tabular-nums block">
+                <span className="text-[12px] font-mono text-cv-muted tabular-nums flex items-center justify-end gap-1.5">
+                  {item.ongoing && <Clock className="w-3 h-3 text-cv-accent" />}
                   {item.period}
                 </span>
                 <p className="text-[12px] text-cv-muted mt-0.5">{item.location}</p>
               </div>
             </header>
-
-            {item.note && (
-              <p className="text-[13px] text-cv-muted leading-[1.65] mt-2 max-w-[52ch]">
-                {item.note}
-              </p>
-            )}
           </div>
         ))}
       </div>
