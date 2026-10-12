@@ -70,5 +70,5 @@
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .cv-sheet { max-width: none !important; width: 100% !important; padding: 8mm 12mm !important; box-shadow: none !important; border-radius: 0 !important; }
   .cv-sheet h3, .cv-sheet h4 { break-after: avoid; }
-  .cv-sheet { zoom: 0.76; }
+  .cv-sheet { zoom: 0.74; }
 }
