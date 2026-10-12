@@ -26,40 +26,40 @@ const Index = () => {
         <Download className="w-4 h-4" />
         Descargar PDF
       </button>
-      <div className="cv-sheet w-full max-w-[850px] bg-background p-8 md:p-14 shadow-[0_1px_3px_rgba(0,0,0,0.06),0_0_0_1px_rgba(0,0,0,0.03)] rounded print:shadow-none print:p-8">
+      <div className="cv-sheet w-full max-w-[850px] bg-background p-8 md:p-14 shadow-[0_1px_3px_rgba(0,0,0,0.06),0_0_0_1px_rgba(0,0,0,0.03)] rounded print:shadow-none print:p-0">
         <CVHeader />
 
         {/* Section divider */}
-        <div className="flex items-center gap-4 mb-10 md:mb-12">
+        <div className="flex items-center gap-4 mb-8 md:mb-12 print:mb-6">
           <div className="flex-1 h-px bg-gradient-to-r from-cv-accent/20 via-cv-border to-transparent" />
           <div className="w-1.5 h-1.5 rounded-full bg-cv-accent/30" />
           <div className="flex-1 h-px bg-gradient-to-l from-cv-accent/20 via-cv-border to-transparent" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-14">
+        <div className="grid grid-cols-1 md:grid-cols-12 print:grid-cols-12 gap-8 md:gap-12 print:gap-8">
           {/* Sidebar */}
-          <div className="md:col-span-4 order-2 md:order-1">
+          <div className="md:col-span-4 print:col-span-4 order-2 md:order-1 print:order-1">
             <CVSidebar />
           </div>
 
           {/* Main Content */}
-          <div className="md:col-span-8 order-1 md:order-2 space-y-10">
+          <div className="md:col-span-8 print:col-span-8 order-1 md:order-2 print:order-2 space-y-10 print:space-y-6">
             <CVExperience />
 
             {/* Achievements */}
             <section>
-              <h3 className="flex items-center gap-2 text-[10px] uppercase tracking-[0.15em] text-cv-muted font-semibold mb-5">
+              <h3 className="flex items-center gap-2 text-[12px] uppercase tracking-[0.12em] text-foreground font-bold mb-5">
                 <span className="w-5 h-px bg-cv-accent" />
                 Logros Destacados
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 print:grid-cols-2 gap-3">
                 <AchievementCard
-                  icon={<Target className="w-4 h-4" />}
+                  icon={<Target className="w-5 h-5" />}
                   title="Fundación de Empresa"
                   description="Cofundador de Iubizon, empresa de importación de tecnología multimedia"
                 />
                 <AchievementCard
-                  icon={<Award className="w-4 h-4" />}
+                  icon={<Award className="w-5 h-5" />}
                   title="+6 Años en Tech"
                   description="Trayectoria consolidada en desarrollo full stack y liderazgo tecnológico"
                 />
@@ -69,12 +69,12 @@ const Index = () => {
         </div>
 
         {/* Footer */}
-        <footer className="mt-14 pt-6 print:mt-5 print:pt-3 border-t border-cv-border">
+        <footer className="mt-14 pt-6 print:mt-6 print:pt-3 break-inside-avoid border-t border-cv-border">
           <div className="flex items-center justify-between">
-            <p className="text-[9px] text-cv-muted tracking-wider uppercase">
+            <p className="text-[11px] text-cv-muted tracking-wider uppercase">
               Noel Moriano — Currículum Vitae
             </p>
-            <p className="text-[9px] text-cv-muted tracking-wider uppercase">
+            <p className="text-[11px] text-cv-muted tracking-wider uppercase">
               Lima, Perú — Octubre 2026
             </p>
           </div>
@@ -93,12 +93,12 @@ const AchievementCard = ({
   title: string;
   description: string;
 }) => (
-  <div className="p-4 rounded-lg bg-cv-subtle border border-cv-border hover:border-cv-accent/20 transition-colors duration-200 group">
+  <div className="p-5 rounded-lg break-inside-avoid bg-cv-subtle border border-cv-border hover:border-cv-accent/20 transition-colors duration-200 group">
     <div className="text-cv-accent mb-2.5 group-hover:scale-110 transition-transform duration-200 inline-block">
       {icon}
     </div>
-    <h4 className="text-[11px] font-bold text-foreground mb-1">{title}</h4>
-    <p className="text-[10px] text-cv-muted leading-relaxed">{description}</p>
+    <h4 className="text-[14px] font-bold text-foreground mb-1">{title}</h4>
+    <p className="text-[13px] text-cv-muted leading-relaxed">{description}</p>
   </div>
 );
 

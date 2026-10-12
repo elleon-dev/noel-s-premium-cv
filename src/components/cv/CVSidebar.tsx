@@ -50,9 +50,9 @@ const languages = [
 
 const CVSidebar = () => {
   return (
-    <aside className="space-y-9">
+    <aside className="space-y-8 print:space-y-6">
       <SkillSection
-        icon={<Lightbulb className="w-3.5 h-3.5" />}
+        icon={<Lightbulb className="w-4 h-4" />}
         title="Competencias Clave"
         items={skills.core}
       />
@@ -60,7 +60,7 @@ const CVSidebar = () => {
       <Divider />
 
       <SkillSection
-        icon={<Code2 className="w-3.5 h-3.5" />}
+        icon={<Code2 className="w-4 h-4" />}
         title="Stack Técnico"
         items={skills.stack}
       />
@@ -68,7 +68,7 @@ const CVSidebar = () => {
       <Divider />
 
       <SkillSection
-        icon={<Sparkles className="w-3.5 h-3.5" />}
+        icon={<Sparkles className="w-4 h-4" />}
         title="AI Skills"
         items={skills.ai}
         highlight
@@ -77,17 +77,17 @@ const CVSidebar = () => {
       <Divider />
 
       <SkillSection
-        icon={<CreditCard className="w-3.5 h-3.5" />}
+        icon={<CreditCard className="w-4 h-4" />}
         title="Integración de Pagos"
         items={skills.payments}
         highlight
-        chipIcon={<CreditCard className="w-2.5 h-2.5 opacity-70" />}
+        chipIcon={<CreditCard className="w-3 h-3 opacity-70" />}
       />
 
       <Divider />
 
       <SkillSection
-        icon={<Briefcase className="w-3.5 h-3.5" />}
+        icon={<Briefcase className="w-4 h-4" />}
         title="Negocio"
         items={skills.business}
       />
@@ -95,14 +95,14 @@ const CVSidebar = () => {
       <Divider />
 
       <section>
-        <SectionTitle icon={<Languages className="w-3.5 h-3.5" />}>
+        <SectionTitle icon={<Languages className="w-4 h-4" />}>
           Idiomas
         </SectionTitle>
         <div className="space-y-3.5">
           {languages.map((lang) => (
-            <div key={lang.name} className="flex justify-between text-[11px]">
+            <div key={lang.name} className="flex justify-between text-[13px]">
               <span className="text-foreground font-medium">{lang.name}</span>
-              <span className="text-cv-muted text-[10px] italic">{lang.level}</span>
+              <span className="text-cv-muted text-[12px] italic">{lang.level}</span>
             </div>
           ))}
         </div>
@@ -126,7 +126,7 @@ const SectionTitle = ({
   children: React.ReactNode;
   icon: React.ReactNode;
 }) => (
-  <h3 className="flex items-center gap-2 text-[10px] uppercase tracking-[0.15em] text-cv-muted font-semibold mb-4">
+  <h3 className="flex items-center gap-2 text-[12px] uppercase tracking-[0.12em] text-foreground font-bold mb-4">
     <span className="text-cv-accent">{icon}</span>
     {children}
   </h3>
@@ -147,17 +147,17 @@ const SkillSection = ({
 }) => (
   <section>
     <SectionTitle icon={icon}>{title}</SectionTitle>
-    <div className="flex flex-wrap gap-1.5">
+    <div className="flex flex-wrap gap-2">
       {items.map((skill) => (
         <span
           key={skill}
           className={
             highlight
-              ? "inline-flex items-center gap-1 px-2.5 py-1 bg-cv-accent/8 text-cv-accent text-[10px] font-semibold rounded-md border border-cv-accent/25 hover:bg-cv-accent/12 transition-colors duration-200 cursor-default"
-              : "px-2.5 py-1 bg-cv-subtle text-foreground text-[10px] font-medium rounded-md border border-cv-border hover:border-cv-accent/30 hover:bg-cv-accent/5 transition-colors duration-200 cursor-default"
+              ? "inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-cv-accent/8 text-cv-accent text-[12px] font-semibold rounded-md border border-cv-accent/25 hover:bg-cv-accent/12 transition-colors duration-200 cursor-default"
+              : "px-2.5 py-1.5 bg-cv-subtle text-foreground text-[12px] font-medium rounded-md border border-cv-border hover:border-cv-accent/30 hover:bg-cv-accent/5 transition-colors duration-200 cursor-default"
           }
         >
-          {highlight && (chipIcon ?? <Sparkles className="w-2.5 h-2.5 opacity-70" />)}
+          {highlight && (chipIcon ?? <Sparkles className="w-3 h-3 opacity-70" />)}
           {skill}
         </span>
       ))}
