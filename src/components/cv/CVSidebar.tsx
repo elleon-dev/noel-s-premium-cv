@@ -23,8 +23,11 @@ const skills = {
   ],
   ai: [
     "Claude AI",
+    "Gemini",
+    "OpenAI / ChatGPT",
     "Antigravity",
     "n8n",
+    "Vercel AI SDK",
   ],
   business: [
     "Importación y Comercio",
