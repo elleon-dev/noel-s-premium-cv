@@ -21,7 +21,7 @@ const Index = () => {
         type="button"
         onClick={handleDownload}
         aria-label="Descargar currículum en PDF"
-        className="print:hidden fixed top-4 right-4 z-50 inline-flex items-center gap-2 rounded-full bg-cv-accent px-4 py-2.5 text-xs font-semibold text-white shadow-lg transition hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-cv-accent focus-visible:ring-offset-2"
+        className="print:hidden fixed top-4 right-4 z-50 inline-flex items-center gap-2 rounded-full bg-cv-accent px-4 py-2.5 text-xs font-semibold text-background shadow-lg transition hover:opacity-90 focus:outline-none focus-visible:ring-2 focus-visible:ring-cv-accent focus-visible:ring-offset-2"
       >
         <Download className="w-4 h-4" />
         Descargar PDF
