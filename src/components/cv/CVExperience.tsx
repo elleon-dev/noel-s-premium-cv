@@ -1,4 +1,4 @@
-import { Rocket, Terminal } from "lucide-react";
+import { Rocket, Terminal, UserRound, Phone } from "lucide-react";
 
 const experiences = [
   {
@@ -18,6 +18,7 @@ const experiences = [
   },
   {
     company: "Servitec Group SAC",
+    reference: { name: "Roberto Mendoza", role: "CEO Servitec", phone: "+51 972 252 744", href: "tel:+51972252744" },
     role: "Director de Proyectos TI",
     period: "Abr 2024 — Abr 2025",
     location: "Lima, Perú",
@@ -33,7 +34,8 @@ const experiences = [
   },
   {
     company: "Webuild",
-    role: "Desarrollador Full Stack",
+    reference: { name: "Bruno Schuermans", role: "IT Manager", phone: "+51 940 490 440", href: "tel:+51940490440" },
+    role: "Team Leader de proyectos",
     period: "Mar 2023 — Feb 2024",
     location: "Lima, Perú",
     description:
@@ -48,6 +50,7 @@ const experiences = [
   },
   {
     company: "Peru Hop",
+    reference: { name: "Bruno Schuermans", role: "IT Manager", phone: "+51 940 490 440", href: "tel:+51940490440" },
     role: "Desarrollador Full Stack",
     period: "Abr 2019 — Mar 2023",
     location: "Lima, Perú",
@@ -117,6 +120,18 @@ const CVExperience = () => {
                 </li>
               ))}
             </ul>
+            {exp.reference && (
+              <div className="mt-4 pt-3 border-t border-cv-border text-[12px] leading-relaxed text-cv-muted space-y-1 break-inside-avoid">
+                <p className="flex items-start gap-2">
+                  <UserRound className="w-3.5 h-3.5 mt-0.5 shrink-0 text-cv-accent" aria-hidden="true" />
+                  <span><span className="font-semibold text-foreground">Referencia:</span> {exp.reference.name} ({exp.reference.role})</span>
+                </p>
+                <a href={exp.reference.href} className="inline-flex items-center gap-2 hover:text-cv-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-cv-accent">
+                  <Phone className="w-3.5 h-3.5 shrink-0 text-cv-accent" aria-hidden="true" />
+                  <span>Tel: {exp.reference.phone}</span>
+                </a>
+              </div>
+            )}
           </div>
         ))}
       </div>
