@@ -1,5 +1,5 @@
 import { Mail, Linkedin, MapPin, Phone, Github } from "lucide-react";
-import fotoAsset from "@/assets/noel-moriano-foto.jpg.asset.json";
+import fotoAsset from "@/assets/noel-moriano-foto.jpg";
 
 const CVHeader = () => {
   return (
