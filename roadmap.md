@@ -6,3 +6,4 @@
 - [x] Mejorar contenido de Peru Hop (Desarrollador Full Stack) con el CV antiguo: Daily Fantasy, interfaces responsivas, correcciones y nuevas funciones
 - [x] Mejorar contenido de Servitec (Director de Proyectos TI): SCRUM, plataformas internas (Korekenke, Practice System, Servitec Sales), BigQuery/Looker
 - [x] PDF de vuelta a 2 hojas en A4 y Carta (referencias en una línea, espaciado de impresión compactado)
+- [x] Reemplazar la foto del CV por la nueva (retrato formal, fondo blanco, recorte cuadrado 512x512 centrado en el rostro)
