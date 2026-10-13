@@ -35,7 +35,7 @@ const experiences = [
   {
     company: "Webuild",
     reference: { name: "Bruno Schuermans", role: "IT Manager", phone: "+51 940 490 440", href: "tel:+51940490440" },
-    role: "Team Leader de proyectos",
+    role: "Team Leader",
     period: "Mar 2023 — Feb 2024",
     location: "Lima, Perú",
     description:
@@ -75,22 +75,15 @@ const CVExperience = () => {
       </h3>
       <div className="space-y-0 border-l-2 border-cv-border pl-7 relative">
         {experiences.map((exp, index) => (
-          <div
-            key={index}
-            className="relative pb-9 print:pb-6 last:pb-0 group break-inside-avoid"
-          >
+          <div key={index} className="relative pb-9 print:pb-6 last:pb-0 group break-inside-avoid">
             {/* Timeline node */}
             <div className="absolute -left-[33px] top-1.5 w-2.5 h-2.5 rounded-full bg-background border-2 border-cv-accent group-hover:bg-cv-accent transition-colors duration-300" />
 
             <header className="flex flex-col sm:flex-row print:flex-row sm:justify-between sm:items-start mb-2.5 gap-1">
               <div>
-                <h4 className="text-[17px] font-bold text-foreground leading-tight">
-                  {exp.role}
-                </h4>
+                <h4 className="text-[17px] font-bold text-foreground leading-tight">{exp.role}</h4>
                 <div className="flex flex-wrap items-center gap-2.5 mt-1">
-                  <p className="text-[14px] text-cv-accent font-semibold">
-                    {exp.company}
-                  </p>
+                  <p className="text-[14px] text-cv-accent font-semibold">{exp.company}</p>
                   <span className="inline-flex items-center gap-1 text-[10px] uppercase tracking-wider font-semibold text-cv-accent bg-cv-accent/8 px-2 py-0.5 rounded-full border border-cv-accent/15">
                     {exp.tagIcon}
                     {exp.tag}
@@ -98,23 +91,16 @@ const CVExperience = () => {
                 </div>
               </div>
               <div className="text-right shrink-0 mt-0.5 sm:mt-0">
-                <span className="text-[12px] font-mono text-cv-muted tabular-nums block">
-                  {exp.period}
-                </span>
+                <span className="text-[12px] font-mono text-cv-muted tabular-nums block">{exp.period}</span>
                 <p className="text-[12px] text-cv-muted mt-0.5">{exp.location}</p>
               </div>
             </header>
 
-            <p className="text-[13.5px] text-cv-muted leading-[1.65] mb-3">
-              {exp.description}
-            </p>
+            <p className="text-[13.5px] text-cv-muted leading-[1.65] mb-3">{exp.description}</p>
 
             <ul className="space-y-1.5">
               {exp.highlights.map((item, i) => (
-                <li
-                  key={i}
-                  className="text-[13px] text-cv-muted leading-relaxed flex items-start gap-2.5"
-                >
+                <li key={i} className="text-[13px] text-cv-muted leading-relaxed flex items-start gap-2.5">
                   <span className="text-cv-accent mt-[1px] shrink-0 text-[11px]">▸</span>
                   <span>{item}</span>
                 </li>
@@ -124,9 +110,15 @@ const CVExperience = () => {
               <div className="mt-4 pt-3 border-t border-cv-border text-[12px] leading-relaxed text-cv-muted space-y-1 break-inside-avoid">
                 <p className="flex items-start gap-2">
                   <UserRound className="w-3.5 h-3.5 mt-0.5 shrink-0 text-cv-accent" aria-hidden="true" />
-                  <span><span className="font-semibold text-foreground">Referencia:</span> {exp.reference.name} ({exp.reference.role})</span>
+                  <span>
+                    <span className="font-semibold text-foreground">Referencia:</span> {exp.reference.name} (
+                    {exp.reference.role})
+                  </span>
                 </p>
-                <a href={exp.reference.href} className="inline-flex items-center gap-2 hover:text-cv-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-cv-accent">
+                <a
+                  href={exp.reference.href}
+                  className="inline-flex items-center gap-2 hover:text-cv-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-cv-accent"
+                >
                   <Phone className="w-3.5 h-3.5 shrink-0 text-cv-accent" aria-hidden="true" />
                   <span>Tel: {exp.reference.phone}</span>
                 </a>
