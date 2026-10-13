@@ -35,15 +35,16 @@ const experiences = [
   {
     company: "Webuild",
     reference: { name: "Bruno Schuermans", role: "IT Manager", phone: "+51 940 490 440", href: "tel:+51940490440" },
-    role: "Team Leader",
+    role: "Team Leader de Proyectos",
     period: "Mar 2023 — Feb 2024",
-    location: "Lima, Perú",
+    location: "Miraflores, Lima, Perú",
     description:
-      "Desarrollo y mantenimiento de aplicaciones web y plataformas digitales con tecnologías full stack modernas.",
+      "Liderazgo de proyectos web para clientes de diversos sectores, capacitando a nuevos integrantes del equipo y garantizando entregas de calidad.",
     highlights: [
-      "Construcción y mantenimiento de aplicaciones web en producción",
-      "Implementación de arquitecturas full stack modernas",
-      "Colaboración en el desarrollo de plataformas digitales",
+      "Colaboración en el desarrollo de las plataformas de venta de pasajes de Cruz del Sur y Civa",
+      "Liderazgo en el desarrollo de ConoceTuDelivery para la Municipalidad de Miraflores, integrando BigQuery y Looker Studio",
+      "Migración de aplicaciones internas a versiones más actuales, mejorando rendimiento y funcionalidad",
+      "Capacitación de nuevos empleados, fortaleciendo las capacidades técnicas del equipo",
     ],
     tag: "Ingeniería",
     tagIcon: <Terminal className="w-3 h-3" />,
