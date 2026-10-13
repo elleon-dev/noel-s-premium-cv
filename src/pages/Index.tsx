@@ -31,7 +31,7 @@ const Index = () => {
         <CVHeader />
 
         {/* Section divider */}
-        <div className="flex items-center gap-4 mb-8 md:mb-12 print:mb-6">
+        <div className="flex items-center gap-4 mb-8 md:mb-12 print:mb-4">
           <div className="flex-1 h-px bg-gradient-to-r from-cv-accent/20 via-cv-border to-transparent" />
           <div className="w-1.5 h-1.5 rounded-full bg-cv-accent/30" />
           <div className="flex-1 h-px bg-gradient-to-l from-cv-accent/20 via-cv-border to-transparent" />
@@ -44,12 +44,12 @@ const Index = () => {
           </div>
 
           {/* Main Content */}
-          <div className="md:col-span-8 print:col-span-8 order-1 md:order-2 print:order-2 space-y-10 print:space-y-6">
+          <div className="md:col-span-8 print:col-span-8 order-1 md:order-2 print:order-2 space-y-10 print:space-y-4">
             <CVExperience />
 
             {/* Achievements */}
             <section>
-              <h3 className="flex items-center gap-2 text-[12px] uppercase tracking-[0.12em] text-foreground font-bold mb-5">
+              <h3 className="flex items-center gap-2 text-[12px] uppercase tracking-[0.12em] text-foreground font-bold mb-5 print:mb-3">
                 <span className="w-5 h-px bg-cv-accent" />
                 Logros Destacados
               </h3>
@@ -96,7 +96,7 @@ const AchievementCard = ({
   title: string;
   description: string;
 }) => (
-  <div className="p-5 rounded-lg break-inside-avoid bg-cv-subtle border border-cv-border hover:border-cv-accent/20 transition-colors duration-200 group">
+  <div className="p-5 print:p-4 rounded-lg break-inside-avoid bg-cv-subtle border border-cv-border hover:border-cv-accent/20 transition-colors duration-200 group">
     <div className="text-cv-accent mb-2.5 group-hover:scale-110 transition-transform duration-200 inline-block">
       {icon}
     </div>

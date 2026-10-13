@@ -70,13 +70,13 @@ const experiences = [
 const CVExperience = () => {
   return (
     <section>
-      <h3 className="flex items-center gap-2 text-[12px] uppercase tracking-[0.12em] text-foreground font-bold mb-7 print:mb-5">
+      <h3 className="flex items-center gap-2 text-[12px] uppercase tracking-[0.12em] text-foreground font-bold mb-7 print:mb-4">
         <span className="w-5 h-px bg-cv-accent" />
         Experiencia Profesional
       </h3>
       <div className="space-y-0 border-l-2 border-cv-border pl-7 relative">
         {experiences.map((exp, index) => (
-          <div key={index} className="relative pb-9 print:pb-6 last:pb-0 group break-inside-avoid">
+          <div key={index} className="relative pb-9 print:pb-4 last:pb-0 group break-inside-avoid">
             {/* Timeline node */}
             <div className="absolute -left-[33px] top-1.5 w-2.5 h-2.5 rounded-full bg-background border-2 border-cv-accent group-hover:bg-cv-accent transition-colors duration-300" />
 
@@ -97,7 +97,7 @@ const CVExperience = () => {
               </div>
             </header>
 
-            <p className="text-[13.5px] text-cv-muted leading-[1.65] mb-3">{exp.description}</p>
+            <p className="text-[13.5px] text-cv-muted leading-[1.65] mb-3 print:mb-2">{exp.description}</p>
 
             <ul className="space-y-1.5">
               {exp.highlights.map((item, i) => (
@@ -108,7 +108,7 @@ const CVExperience = () => {
               ))}
             </ul>
             {exp.reference && (
-              <div className="mt-4 pt-3 border-t border-cv-border text-[12px] leading-relaxed text-cv-muted space-y-1 break-inside-avoid">
+              <div className="mt-4 pt-3 print:mt-3 print:pt-2 border-t border-cv-border text-[12px] leading-relaxed text-cv-muted space-y-1 break-inside-avoid">
                 <p className="flex items-start gap-2">
                   <UserRound className="w-3.5 h-3.5 mt-0.5 shrink-0 text-cv-accent" aria-hidden="true" />
                   <span>
