@@ -44,7 +44,7 @@ const Index = () => {
           </div>
 
           {/* Main Content */}
-          <div className="md:col-span-8 print:col-span-8 order-1 md:order-2 print:order-2 space-y-10 print:space-y-4">
+          <div className="md:col-span-8 print:col-span-8 order-1 md:order-2 print:order-2 space-y-10 print:space-y-3">
             <CVExperience />
 
             {/* Achievements */}
@@ -72,7 +72,7 @@ const Index = () => {
         </div>
 
         {/* Footer */}
-        <footer className="mt-14 pt-6 print:mt-6 print:pt-3 break-inside-avoid border-t border-cv-border">
+        <footer className="mt-14 pt-6 print:mt-3 print:pt-3 break-inside-avoid border-t border-cv-border">
           <div className="flex items-center justify-between">
             <p className="text-[11px] text-cv-muted tracking-wider uppercase">
               Noel Moriano — Currículum Vitae

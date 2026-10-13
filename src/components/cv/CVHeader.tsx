@@ -3,7 +3,7 @@ import fotoAsset from "@/assets/noel-moriano-foto.jpg";
 
 const CVHeader = () => {
   return (
-    <header className="mb-8 md:mb-12 print:mb-6">
+    <header className="mb-8 md:mb-12 print:mb-3">
       {/* Top bar accent */}
       <div className="w-12 h-1 bg-cv-accent rounded-full mb-8" />
 
