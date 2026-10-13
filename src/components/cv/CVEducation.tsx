@@ -28,7 +28,7 @@ const CVEducation = () => {
         {education.map((item, index) => (
           <div
             key={index}
-            className="relative pb-7 print:pb-4 last:pb-0 group break-inside-avoid"
+            className="relative pb-7 print:pb-3 last:pb-0 group break-inside-avoid"
           >
             <div className="absolute -left-[33px] top-1.5 w-2.5 h-2.5 rounded-full bg-background border-2 border-cv-accent group-hover:bg-cv-accent transition-colors duration-300" />
 

@@ -72,7 +72,7 @@ const Index = () => {
         </div>
 
         {/* Footer */}
-        <footer className="mt-14 pt-6 print:mt-3 print:pt-3 break-inside-avoid border-t border-cv-border">
+        <footer className="mt-14 pt-6 print:mt-2 print:pt-3 break-inside-avoid border-t border-cv-border">
           <div className="flex items-center justify-between">
             <p className="text-[11px] text-cv-muted tracking-wider uppercase">
               Noel Moriano — Currículum Vitae
@@ -96,7 +96,7 @@ const AchievementCard = ({
   title: string;
   description: string;
 }) => (
-  <div className="p-5 print:p-4 rounded-lg break-inside-avoid bg-cv-subtle border border-cv-border hover:border-cv-accent/20 transition-colors duration-200 group">
+  <div className="p-5 print:p-3 rounded-lg break-inside-avoid bg-cv-subtle border border-cv-border hover:border-cv-accent/20 transition-colors duration-200 group">
     <div className="text-cv-accent mb-2.5 group-hover:scale-110 transition-transform duration-200 inline-block">
       {icon}
     </div>
