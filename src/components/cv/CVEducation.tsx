@@ -20,7 +20,7 @@ const education = [
 const CVEducation = () => {
   return (
     <section>
-      <h3 className="flex items-center gap-2 text-[12px] uppercase tracking-[0.12em] text-foreground font-bold mb-7 print:mb-5">
+      <h3 className="flex items-center gap-2 text-[12px] uppercase tracking-[0.12em] text-foreground font-bold mb-7 print:mb-2">
         <span className="w-5 h-px bg-cv-accent" />
         Formación Académica
       </h3>
@@ -28,7 +28,7 @@ const CVEducation = () => {
         {education.map((item, index) => (
           <div
             key={index}
-            className="relative pb-7 print:pb-5 last:pb-0 group break-inside-avoid"
+            className="relative pb-7 print:pb-2 last:pb-0 group break-inside-avoid"
           >
             <div className="absolute -left-[33px] top-1.5 w-2.5 h-2.5 rounded-full bg-background border-2 border-cv-accent group-hover:bg-cv-accent transition-colors duration-300" />
 

@@ -31,7 +31,7 @@ const Index = () => {
         <CVHeader />
 
         {/* Section divider */}
-        <div className="flex items-center gap-4 mb-8 md:mb-12 print:mb-6">
+        <div className="flex items-center gap-4 mb-8 md:mb-12 print:mb-4">
           <div className="flex-1 h-px bg-gradient-to-r from-cv-accent/20 via-cv-border to-transparent" />
           <div className="w-1.5 h-1.5 rounded-full bg-cv-accent/30" />
           <div className="flex-1 h-px bg-gradient-to-l from-cv-accent/20 via-cv-border to-transparent" />
@@ -44,12 +44,12 @@ const Index = () => {
           </div>
 
           {/* Main Content */}
-          <div className="md:col-span-8 print:col-span-8 order-1 md:order-2 print:order-2 space-y-10 print:space-y-6">
+          <div className="md:col-span-8 print:col-span-8 order-1 md:order-2 print:order-2 space-y-10 print:space-y-2">
             <CVExperience />
 
             {/* Achievements */}
             <section>
-              <h3 className="flex items-center gap-2 text-[12px] uppercase tracking-[0.12em] text-foreground font-bold mb-5">
+              <h3 className="flex items-center gap-2 text-[12px] uppercase tracking-[0.12em] text-foreground font-bold mb-5 print:mb-2">
                 <span className="w-5 h-px bg-cv-accent" />
                 Logros Destacados
               </h3>
@@ -72,7 +72,7 @@ const Index = () => {
         </div>
 
         {/* Footer */}
-        <footer className="mt-14 pt-6 print:mt-6 print:pt-3 break-inside-avoid border-t border-cv-border">
+        <footer className="mt-14 pt-6 print:mt-0.5 print:pt-1.5 break-inside-avoid border-t border-cv-border">
           <div className="flex items-center justify-between">
             <p className="text-[11px] text-cv-muted tracking-wider uppercase">
               Noel Moriano — Currículum Vitae
@@ -96,8 +96,8 @@ const AchievementCard = ({
   title: string;
   description: string;
 }) => (
-  <div className="p-5 rounded-lg break-inside-avoid bg-cv-subtle border border-cv-border hover:border-cv-accent/20 transition-colors duration-200 group">
-    <div className="text-cv-accent mb-2.5 group-hover:scale-110 transition-transform duration-200 inline-block">
+  <div className="p-5 print:p-3 rounded-lg break-inside-avoid bg-cv-subtle border border-cv-border hover:border-cv-accent/20 transition-colors duration-200 group">
+    <div className="text-cv-accent mb-2.5 print:hidden group-hover:scale-110 transition-transform duration-200 inline-block">
       {icon}
     </div>
     <h4 className="text-[14px] font-bold text-foreground mb-1">{title}</h4>
