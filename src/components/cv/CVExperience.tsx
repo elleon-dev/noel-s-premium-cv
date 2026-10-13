@@ -54,13 +54,13 @@ const experiences = [
     reference: { name: "Bruno Schuermans", role: "IT Manager", phone: "+51 940 490 440", href: "tel:+51940490440" },
     role: "Desarrollador Full Stack",
     period: "Abr 2019 — Mar 2023",
-    location: "Lima, Perú",
+    location: "Miraflores, Lima, Perú",
     description:
-      "Desarrollo y mejora de sistemas digitales y plataformas de soporte a operaciones de negocio y servicios al cliente.",
+      "Más de 4 años desarrollando plataformas digitales para diversos clientes, enfocándose en resultados de alta calidad y escalables.",
     highlights: [
-      "Desarrollo de sistemas digitales de soporte a operaciones",
-      "Mejora de plataformas orientadas al cliente",
-      "Mantenimiento y escalado de aplicaciones en producción durante más de 4 años",
+      "Participación en el desarrollo del primer Daily Fantasy del Perú, plataforma de e-sports con módulos interactivos y rendimiento óptimo",
+      "Diseño de interfaces modernas y responsivas alineadas a los objetivos de cada proyecto",
+      "Implementación de correcciones y nuevas funcionalidades en aplicaciones internas y externas, priorizando la experiencia del usuario",
     ],
     tag: "Ingeniería",
     tagIcon: <Terminal className="w-3 h-3" />,
