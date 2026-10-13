@@ -20,7 +20,7 @@ const education = [
 const CVEducation = () => {
   return (
     <section>
-      <h3 className="flex items-center gap-2 text-[12px] uppercase tracking-[0.12em] text-foreground font-bold mb-7 print:mb-4">
+      <h3 className="flex items-center gap-2 text-[12px] uppercase tracking-[0.12em] text-foreground font-bold mb-7 print:mb-2">
         <span className="w-5 h-px bg-cv-accent" />
         Formación Académica
       </h3>

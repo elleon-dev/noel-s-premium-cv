@@ -44,12 +44,12 @@ const Index = () => {
           </div>
 
           {/* Main Content */}
-          <div className="md:col-span-8 print:col-span-8 order-1 md:order-2 print:order-2 space-y-10 print:space-y-3">
+          <div className="md:col-span-8 print:col-span-8 order-1 md:order-2 print:order-2 space-y-10 print:space-y-2">
             <CVExperience />
 
             {/* Achievements */}
             <section>
-              <h3 className="flex items-center gap-2 text-[12px] uppercase tracking-[0.12em] text-foreground font-bold mb-5 print:mb-3">
+              <h3 className="flex items-center gap-2 text-[12px] uppercase tracking-[0.12em] text-foreground font-bold mb-5 print:mb-2">
                 <span className="w-5 h-px bg-cv-accent" />
                 Logros Destacados
               </h3>
@@ -97,7 +97,7 @@ const AchievementCard = ({
   description: string;
 }) => (
   <div className="p-5 print:p-3 rounded-lg break-inside-avoid bg-cv-subtle border border-cv-border hover:border-cv-accent/20 transition-colors duration-200 group">
-    <div className="text-cv-accent mb-2.5 group-hover:scale-110 transition-transform duration-200 inline-block">
+    <div className="text-cv-accent mb-2.5 print:hidden group-hover:scale-110 transition-transform duration-200 inline-block">
       {icon}
     </div>
     <h4 className="text-[14px] font-bold text-foreground mb-1">{title}</h4>

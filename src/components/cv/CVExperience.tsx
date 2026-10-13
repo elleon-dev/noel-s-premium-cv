@@ -108,18 +108,16 @@ const CVExperience = () => {
               ))}
             </ul>
             {exp.reference && (
-              <div className="mt-4 pt-3 print:mt-2 print:pt-1.5 border-t border-cv-border text-[12px] leading-relaxed text-cv-muted space-y-1 break-inside-avoid">
-                <p className="flex items-start gap-2">
-                  <UserRound className="w-3.5 h-3.5 mt-0.5 shrink-0 text-cv-accent" aria-hidden="true" />
+              <div className="mt-4 pt-3 print:mt-2 print:pt-1.5 border-t border-cv-border text-[12px] leading-relaxed text-cv-muted break-inside-avoid">
+                <a
+                  href={exp.reference.href}
+                  className="flex items-center gap-2 hover:text-cv-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-cv-accent"
+                >
+                  <UserRound className="w-3.5 h-3.5 shrink-0 text-cv-accent" aria-hidden="true" />
                   <span>
                     <span className="font-semibold text-foreground">Referencia:</span> {exp.reference.name} (
                     {exp.reference.role})
                   </span>
-                </p>
-                <a
-                  href={exp.reference.href}
-                  className="inline-flex items-center gap-2 hover:text-cv-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-cv-accent"
-                >
                   <Phone className="w-3.5 h-3.5 shrink-0 text-cv-accent" aria-hidden="true" />
                   <span>Tel: {exp.reference.phone}</span>
                 </a>
