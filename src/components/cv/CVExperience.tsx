@@ -111,15 +111,15 @@ const CVExperience = () => {
               <div className="mt-4 pt-3 print:mt-2 print:pt-1.5 border-t border-cv-border text-[12px] leading-relaxed text-cv-muted break-inside-avoid">
                 <a
                   href={exp.reference.href}
-                  className="flex items-center gap-2 hover:text-cv-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-cv-accent"
+                  className="flex flex-wrap items-center gap-x-2 gap-y-0.5 hover:text-cv-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-cv-accent"
                 >
                   <UserRound className="w-3.5 h-3.5 shrink-0 text-cv-accent" aria-hidden="true" />
-                  <span>
+                  <span className="whitespace-nowrap">
                     <span className="font-semibold text-foreground">Referencia:</span> {exp.reference.name} (
                     {exp.reference.role})
                   </span>
                   <Phone className="w-3.5 h-3.5 shrink-0 text-cv-accent" aria-hidden="true" />
-                  <span>Tel: {exp.reference.phone}</span>
+                  <span className="whitespace-nowrap">Tel: {exp.reference.phone}</span>
                 </a>
               </div>
             )}

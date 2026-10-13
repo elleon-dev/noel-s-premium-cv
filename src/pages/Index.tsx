@@ -72,7 +72,7 @@ const Index = () => {
         </div>
 
         {/* Footer */}
-        <footer className="mt-14 pt-6 print:mt-2 print:pt-3 break-inside-avoid border-t border-cv-border">
+        <footer className="mt-14 pt-6 print:mt-1 print:pt-2 break-inside-avoid border-t border-cv-border">
           <div className="flex items-center justify-between">
             <p className="text-[11px] text-cv-muted tracking-wider uppercase">
               Noel Moriano — Currículum Vitae
