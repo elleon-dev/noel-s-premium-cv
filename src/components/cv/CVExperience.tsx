@@ -25,9 +25,9 @@ const experiences = [
     description:
       "Empresa tecnológica de servicios TI y comercialización de equipos electrónicos, incluyendo portátiles, PCs y proyectores.",
     highlights: [
-      "Dirección de proyectos tecnológicos e iniciativas de transformación digital",
-      "Mejoras operativas en la línea de servicios TI",
-      "Gestión de proyectos tecnológicos y mejoras operativas",
+      "Implementación de la metodología SCRUM y capacitación del equipo en tecnologías modernas (React, Node.js, TypeScript, Firebase)",
+      "Liderazgo del desarrollo de plataformas internas como Korekenke, Practice System y Servitec Sales",
+      "Implementación de BigQuery y Looker Studio para el análisis de datos y la creación de reportes",
     ],
     tag: "Liderazgo",
     tagIcon: <Rocket className="w-3 h-3" />,
@@ -76,7 +76,7 @@ const CVExperience = () => {
       </h3>
       <div className="space-y-0 border-l-2 border-cv-border pl-7 relative">
         {experiences.map((exp, index) => (
-          <div key={index} className="relative pb-9 print:pb-4 last:pb-0 group break-inside-avoid">
+          <div key={index} className="relative pb-9 print:pb-3 last:pb-0 group break-inside-avoid">
             {/* Timeline node */}
             <div className="absolute -left-[33px] top-1.5 w-2.5 h-2.5 rounded-full bg-background border-2 border-cv-accent group-hover:bg-cv-accent transition-colors duration-300" />
 
@@ -101,14 +101,14 @@ const CVExperience = () => {
 
             <ul className="space-y-1.5">
               {exp.highlights.map((item, i) => (
-                <li key={i} className="text-[13px] text-cv-muted leading-relaxed flex items-start gap-2.5">
+                <li key={i} className="text-[13px] text-cv-muted leading-relaxed print:leading-snug flex items-start gap-2.5">
                   <span className="text-cv-accent mt-[1px] shrink-0 text-[11px]">▸</span>
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
             {exp.reference && (
-              <div className="mt-4 pt-3 print:mt-3 print:pt-2 border-t border-cv-border text-[12px] leading-relaxed text-cv-muted space-y-1 break-inside-avoid">
+              <div className="mt-4 pt-3 print:mt-2 print:pt-1.5 border-t border-cv-border text-[12px] leading-relaxed text-cv-muted space-y-1 break-inside-avoid">
                 <p className="flex items-start gap-2">
                   <UserRound className="w-3.5 h-3.5 mt-0.5 shrink-0 text-cv-accent" aria-hidden="true" />
                   <span>
